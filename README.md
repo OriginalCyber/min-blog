@@ -11,3 +11,4 @@
 "# say_template" 
 "# say_template" 
 "# min-blog" 
+"# min-blog" 
