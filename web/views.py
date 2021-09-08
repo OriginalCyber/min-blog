@@ -10,7 +10,7 @@ def index(request):
     return render(request, "index.html", context)
 
 
-def detail(request, id):
+def detaill(request, id):
     context = {}
     subjects = Subject.objects.filter(id=id)
     for subject in subjects:
