@@ -91,7 +91,7 @@ module.exports = function(XRegExp) {
         flags = flags || '';
         // Used with `asXRegExp` calls for `pattern` and subpatterns in `subs`, to work around how
         // some browsers convert `RegExp('\n')` to a regex that contains the literal characters `\`
-        // and `n`. See more details at <https://github.com/slevithan/xregexp/pull/163>.
+        // and `n`. See more detaills at <https://github.com/slevithan/xregexp/pull/163>.
         var addFlagX = flags.indexOf('x') > -1;
         var inlineFlags = /^\(\?([\w$]+)\)/.exec(pattern);
         // Add flags within a leading mode modifier to the overall pattern's flags
@@ -204,7 +204,7 @@ module.exports = function(XRegExp) {
     'use strict';
 
     /**
-     * Returns a match detail object composed of the provided values.
+     * Returns a match detaill object composed of the provided values.
      *
      * @private
      */
@@ -219,7 +219,7 @@ module.exports = function(XRegExp) {
 
     /**
      * Returns an array of match strings between outermost left and right delimiters, or an array of
-     * objects with detailed match parts and position data. An error is thrown if delimiters are
+     * objects with detailled match parts and position data. An error is thrown if delimiters are
      * unbalanced within the data.
      *
      * @memberOf XRegExp
@@ -2764,7 +2764,7 @@ var nativ = {
 var fixed = {};
 // Storage for regexes cached by `XRegExp.cache`
 var regexCache = {};
-// Storage for pattern details cached by the `XRegExp` constructor
+// Storage for pattern detaills cached by the `XRegExp` constructor
 var patternCache = {};
 // Storage for regex syntax tokens added internally or by `XRegExp.addToken`
 var tokens = [];
@@ -3947,14 +3947,14 @@ XRegExp.replace = function(str, search, replacement, scope) {
 
 /**
  * Performs batch processing of string replacements. Used like `XRegExp.replace`, but accepts an
- * array of replacement details. Later replacements operate on the output of earlier replacements.
- * Replacement details are accepted as an array with a regex or string to search for, the
+ * array of replacement detaills. Later replacements operate on the output of earlier replacements.
+ * Replacement detaills are accepted as an array with a regex or string to search for, the
  * replacement string or function, and an optional scope of 'one' or 'all'. Uses the XRegExp
  * replacement text syntax, which supports named backreference properties via `${name}`.
  *
  * @memberOf XRegExp
  * @param {String} str String to search.
- * @param {Array} replacements Array of replacement detail arrays.
+ * @param {Array} replacements Array of replacement detaill arrays.
  * @returns {String} New string with all replacements.
  * @example
  *

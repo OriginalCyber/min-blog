@@ -2831,7 +2831,7 @@ var exports$1 = {
 			// `quadraticCurveTo` since it generates better results when rect is
 			// almost a circle. 0.516 (instead of 0.5) produces results with visually
 			// closer proportion to the previous impl and it is inscribed in the
-			// circle with `radius`. For more details, see the following PRs:
+			// circle with `radius`. For more detaills, see the following PRs:
 			// https://github.com/chartjs/Chart.js/issues/5597
 			// https://github.com/chartjs/Chart.js/issues/5858
 			cornerRadius = radius * 0.516;
@@ -10945,7 +10945,7 @@ function DateAdapter(options) {
 helpers$1.extend(DateAdapter.prototype, /** @lends DateAdapter */ {
 	/**
 	 * Returns a map of time formats for the supported formatting units defined
-	 * in Unit as well as 'datetime' representing a detailed date/time string.
+	 * in Unit as well as 'datetime' representing a detailled date/time string.
 	 * @returns {{string: string}}
 	 */
 	formats: abstract,
@@ -12687,7 +12687,7 @@ function generateTicks(generationOptions, dataRange) {
 	var ticks = [];
 	// To get a "nice" value for the tick spacing, we will use the appropriately named
 	// "nice number" algorithm. See https://stackoverflow.com/questions/8506881/nice-label-algorithm-for-charts-with-minimum-ticks
-	// for details.
+	// for detaills.
 
 	var MIN_SPACING = 1e-14;
 	var stepSize = generationOptions.stepSize;
@@ -16971,7 +16971,7 @@ var moment = createCommonjsModule(function (module, exports) {
         }
     }
 
-    // RFC 2822 regex: For details see https://tools.ietf.org/html/rfc2822#section-3.3
+    // RFC 2822 regex: For detaills see https://tools.ietf.org/html/rfc2822#section-3.3
     var rfc2822 = /^(?:(Mon|Tue|Wed|Thu|Fri|Sat|Sun),?\s)?(\d{1,2})\s(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\s(\d{2,4})\s(\d\d):(\d\d)(?::(\d\d))?\s(?:(UT|GMT|[ECMP][SD]T)|([Zz])|([+-]\d{4}))$/;
 
     function extractFromRFC2822Strings(yearStr, monthStr, dayStr, hourStr, minuteStr, secondStr) {

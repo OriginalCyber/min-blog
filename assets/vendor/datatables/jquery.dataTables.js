@@ -16,9 +16,9 @@
  *
  * This source file is distributed in the hope that it will be useful, but
  * WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY
- * or FITNESS FOR A PARTICULAR PURPOSE. See the license files for details.
+ * or FITNESS FOR A PARTICULAR PURPOSE. See the license files for detaills.
  *
- * For details please refer to: http://www.datatables.net
+ * For detaills please refer to: http://www.datatables.net
  */
 
 /*jslint evil: true, undef: true, browser: true */
@@ -8246,7 +8246,7 @@
 	
 	
 	
-	var __details_add = function ( ctx, row, data, klass )
+	var __detaills_add = function ( ctx, row, data, klass )
 	{
 		// Convert to array of TR elements
 		var rows = [];
@@ -8278,62 +8278,62 @@
 	
 		addRow( data, klass );
 	
-		if ( row._details ) {
-			row._details.detach();
+		if ( row._detaills ) {
+			row._detaills.detach();
 		}
 	
-		row._details = $(rows);
+		row._detaills = $(rows);
 	
 		// If the children were already shown, that state should be retained
-		if ( row._detailsShow ) {
-			row._details.insertAfter( row.nTr );
+		if ( row._detaillsShow ) {
+			row._detaills.insertAfter( row.nTr );
 		}
 	};
 	
 	
-	var __details_remove = function ( api, idx )
+	var __detaills_remove = function ( api, idx )
 	{
 		var ctx = api.context;
 	
 		if ( ctx.length ) {
 			var row = ctx[0].aoData[ idx !== undefined ? idx : api[0] ];
 	
-			if ( row && row._details ) {
-				row._details.remove();
+			if ( row && row._detaills ) {
+				row._detaills.remove();
 	
-				row._detailsShow = undefined;
-				row._details = undefined;
+				row._detaillsShow = undefined;
+				row._detaills = undefined;
 			}
 		}
 	};
 	
 	
-	var __details_display = function ( api, show ) {
+	var __detaills_display = function ( api, show ) {
 		var ctx = api.context;
 	
 		if ( ctx.length && api.length ) {
 			var row = ctx[0].aoData[ api[0] ];
 	
-			if ( row._details ) {
-				row._detailsShow = show;
+			if ( row._detaills ) {
+				row._detaillsShow = show;
 	
 				if ( show ) {
-					row._details.insertAfter( row.nTr );
+					row._detaills.insertAfter( row.nTr );
 				}
 				else {
-					row._details.detach();
+					row._detaills.detach();
 				}
 	
-				__details_events( ctx[0] );
+				__detaills_events( ctx[0] );
 			}
 		}
 	};
 	
 	
-	var __details_events = function ( settings )
+	var __detaills_events = function ( settings )
 	{
 		var api = new _Api( settings );
-		var namespace = '.dt.DT_details';
+		var namespace = '.dt.DT_detaills';
 		var drawEvent = 'draw'+namespace;
 		var colvisEvent = 'column-visibility'+namespace;
 		var destroyEvent = 'destroy'+namespace;
@@ -8341,7 +8341,7 @@
 	
 		api.off( drawEvent +' '+ colvisEvent +' '+ destroyEvent );
 	
-		if ( _pluck( data, '_details' ).length > 0 ) {
+		if ( _pluck( data, '_detaills' ).length > 0 ) {
 			// On each draw, insert the required elements into the document
 			api.on( drawEvent, function ( e, ctx ) {
 				if ( settings !== ctx ) {
@@ -8352,8 +8352,8 @@
 					// Internal data grab
 					var row = data[ idx ];
 	
-					if ( row._detailsShow ) {
-						row._details.insertAfter( row.nTr );
+					if ( row._detaillsShow ) {
+						row._detaills.insertAfter( row.nTr );
 					}
 				} );
 			} );
@@ -8364,15 +8364,15 @@
 					return;
 				}
 	
-				// Update the colspan for the details rows (note, only if it already has
+				// Update the colspan for the detaills rows (note, only if it already has
 				// a colspan)
 				var row, visible = _fnVisbleColumns( ctx );
 	
 				for ( var i=0, ien=data.length ; i<ien ; i++ ) {
 					row = data[i];
 	
-					if ( row._details ) {
-						row._details.children('td[colspan]').attr('colspan', visible );
+					if ( row._detaills ) {
+						row._detaills.children('td[colspan]').attr('colspan', visible );
 					}
 				}
 			} );
@@ -8384,8 +8384,8 @@
 				}
 	
 				for ( var i=0, ien=data.length ; i<ien ; i++ ) {
-					if ( data[i]._details ) {
-						__details_remove( api, i );
+					if ( data[i]._detaills ) {
+						__detaills_remove( api, i );
 					}
 				}
 			} );
@@ -8407,7 +8407,7 @@
 		if ( data === undefined ) {
 			// get
 			return ctx.length && this.length ?
-				ctx[0].aoData[ this[0] ]._details :
+				ctx[0].aoData[ this[0] ]._detaills :
 				undefined;
 		}
 		else if ( data === true ) {
@@ -8416,11 +8416,11 @@
 		}
 		else if ( data === false ) {
 			// remove
-			__details_remove( this );
+			__detaills_remove( this );
 		}
 		else if ( ctx.length && this.length ) {
 			// set
-			__details_add( ctx[0], ctx[0].aoData[ this[0] ], data, klass );
+			__detaills_add( ctx[0], ctx[0].aoData[ this[0] ], data, klass );
 		}
 	
 		return this;
@@ -8431,7 +8431,7 @@
 		_child_obj+'.show()',
 		_child_mth+'.show()' // only when `child()` was called with parameters (without
 	], function ( show ) {   // it returns an object and this method is not executed)
-		__details_display( this, true );
+		__detaills_display( this, true );
 		return this;
 	} );
 	
@@ -8440,7 +8440,7 @@
 		_child_obj+'.hide()',
 		_child_mth+'.hide()' // only when `child()` was called with parameters (without
 	], function () {         // it returns an object and this method is not executed)
-		__details_display( this, false );
+		__detaills_display( this, false );
 		return this;
 	} );
 	
@@ -8449,7 +8449,7 @@
 		_child_obj+'.remove()',
 		_child_mth+'.remove()' // only when `child()` was called with parameters (without
 	], function () {           // it returns an object and this method is not executed)
-		__details_remove( this );
+		__detaills_remove( this );
 		return this;
 	} );
 	
@@ -8458,8 +8458,8 @@
 		var ctx = this.context;
 	
 		if ( ctx.length && this.length ) {
-			// _detailsShown as false or undefined will fall through to return false
-			return ctx[0].aoData[ this[0] ]._detailsShow || false;
+			// _detaillsShown as false or undefined will fall through to return false
+			return ctx[0].aoData[ this[0] ]._detaillsShow || false;
 		}
 		return false;
 	} );
@@ -10267,7 +10267,7 @@
 	
 		/**
 		 * The `columns` option in the initialisation parameter allows you to define
-		 * details about the way individual columns behave. For a full list of
+		 * detaills about the way individual columns behave. For a full list of
 		 * column options that can be set, please see
 		 * {@link DataTable.defaults.column}. Note that if you use `columns` to
 		 * define your columns, you must have an entry in the array for every single
@@ -11664,7 +11664,7 @@
 	
 	
 			/**
-			 * Detail the action that will be taken when the drop down menu for the
+			 * detaill the action that will be taken when the drop down menu for the
 			 * pagination length option is changed. The '_MENU_' variable is replaced
 			 * with a default select list of 10, 25, 50 and 100, and can be replaced
 			 * with a custom select box if required.
@@ -11750,7 +11750,7 @@
 	
 	
 			/**
-			 * Details the actions that will be taken when the user types into the
+			 * detaills the actions that will be taken when the user types into the
 			 * filtering input text box. The variable "_INPUT_", if used in the string,
 			 * is replaced with the HTML text box for the filtering input allowing
 			 * control over where it appears in the string. If "_INPUT_" is not given
@@ -12464,7 +12464,7 @@
 		 *    //      "platform": {
 		 *    //         "inner": {value}
 		 *    //      },
-		 *    //      "details": [
+		 *    //      "detaills": [
 		 *    //         {value}, {value}
 		 *    //      ]
 		 *    //   }
@@ -12475,8 +12475,8 @@
 		 *          { "data": "engine" },
 		 *          { "data": "browser" },
 		 *          { "data": "platform.inner" },
-		 *          { "data": "details.0" },
-		 *          { "data": "details.1" }
+		 *          { "data": "detaills.0" },
+		 *          { "data": "detaills.1" }
 		 *        ]
 		 *      } );
 		 *    } );
@@ -13263,7 +13263,7 @@
 		"aanFeatures": [],
 	
 		/**
-		 * Store data information - see {@link DataTable.models.oRow} for detailed
+		 * Store data information - see {@link DataTable.models.oRow} for detailled
 		 * information.
 		 *  @type array
 		 *  @default []
