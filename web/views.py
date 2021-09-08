@@ -6,7 +6,7 @@ from django.shortcuts import render
 
 def index (request):
     context = {}
-    context['subjects'] = Subject.objects.all()
+    context['Subjects'] = Subject.objects.all()
 
     return render(request, 'index.html', context)
 
@@ -15,7 +15,7 @@ def detall(request, id):
     context = { }
     subjects = Subject.objects.filter(id=id)
     for subject in subjects:
-        context['subject'] = subject
+        context['Subject'] = subject
         
     return render(request, "detall.html", context)
     

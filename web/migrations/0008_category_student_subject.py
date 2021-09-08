@@ -44,7 +44,7 @@ class Migration(migrations.Migration):
                 ('Subject_code', models.CharField(max_length=25)),
                 ('subject_name_th', models.CharField(max_length=255)),
                 ('subject_name_en', models.CharField(max_length=255)),
-                ('category', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='web.category')),
+                ('category', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='web.Category')),
             ],
             options={
                 'verbose_name': 'Subject',
