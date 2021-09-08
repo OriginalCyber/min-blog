@@ -9,46 +9,75 @@ class Migration(migrations.Migration):
     initial = True
 
     dependencies = [
-        ('web', '0007_auto_20210903_1912'),
+        ("web", "0007_auto_20210903_1912"),
     ]
 
     operations = [
         migrations.CreateModel(
-            name='Category',
+            name="Category",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('name', models.CharField(max_length=50)),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("name", models.CharField(max_length=50)),
             ],
             options={
-                'verbose_name': 'Category',
-                'verbose_name_plural': 'Categorys',
+                "verbose_name": "Category",
+                "verbose_name_plural": "Categorys",
             },
         ),
         migrations.CreateModel(
-            name='Student',
+            name="Student",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('student_code', models.CharField(max_length=11)),
-                ('first_name', models.CharField(max_length=255)),
-                ('last_name', models.CharField(max_length=255)),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("student_code", models.CharField(max_length=11)),
+                ("first_name", models.CharField(max_length=255)),
+                ("last_name", models.CharField(max_length=255)),
             ],
             options={
-                'verbose_name': 'Student',
-                'verbose_name_plural': 'Students',
+                "verbose_name": "Student",
+                "verbose_name_plural": "Students",
             },
         ),
         migrations.CreateModel(
-            name='Subject',
+            name="Subject",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('Subject_code', models.CharField(max_length=25)),
-                ('subject_name_th', models.CharField(max_length=255)),
-                ('subject_name_en', models.CharField(max_length=255)),
-                ('category', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='web.Category')),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("Subject_code", models.CharField(max_length=25)),
+                ("subject_name_th", models.CharField(max_length=255)),
+                ("subject_name_en", models.CharField(max_length=255)),
+                (
+                    "category",
+                    models.ForeignKey(
+                        on_delete=django.db.models.deletion.CASCADE, to="web.Category"
+                    ),
+                ),
             ],
             options={
-                'verbose_name': 'Subject',
-                'verbose_name_plural': 'Subjects',
+                "verbose_name": "Subject",
+                "verbose_name_plural": "Subjects",
             },
         ),
     ]
