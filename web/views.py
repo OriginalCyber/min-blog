@@ -16,7 +16,7 @@ def detaill(request, id):
     for subject in subjects:
         context["subject"] = subject
 
-    return render(request, "detail.html", context)
+    return render(request, "detaill.html", context)
 
 
 def about(request):
