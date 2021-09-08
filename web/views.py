@@ -10,13 +10,13 @@ def index(request):
     return render(request, "index.html", context)
 
 
-def detailll(request, id):
+def detaill(request, id):
     context = {}
     subjects = Subject.objects.filter(id=id)
     for subject in subjects:
         context["subject"] = subject
 
-    return render(request, "detailll.html", context)
+    return render(request, "detaill.html", context)
 
 
 def about(request):
