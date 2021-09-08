@@ -15,7 +15,7 @@ def detall(request, id):
     context = { }
     subjects = Subject.objects.filter(id=id)
     for subject in subjects:
-        context['Subject'] = subject
+        context['subject'] = subject
         
     return render(request, "detall.html", context)
     
