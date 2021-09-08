@@ -45,7 +45,8 @@ class Subject(models.Model):
     subject_name_th = models.CharField(max_length=255)
     subject_name_en = models.CharField(max_length=255)
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
-    student = models.ManyToManyField(Student, default=None, blank=True)
+    student = models.ManyToManyField(
+        Student, default=None, null=True, blank=True)
 
     class Meta:
         """Meta definition for Subject."""
