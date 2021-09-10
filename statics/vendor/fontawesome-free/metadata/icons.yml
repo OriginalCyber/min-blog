@@ -926,7 +926,7 @@ asterisk:
   search:
     terms:
       - annotation
-      - detaills
+      - details
       - reference
       - star
   styles:
@@ -2624,7 +2624,7 @@ calendar-day:
   search:
     terms:
       - date
-      - detaill
+      - detail
       - event
       - focus
       - schedule
@@ -2712,7 +2712,7 @@ calendar-week:
   search:
     terms:
       - date
-      - detaill
+      - detail
       - event
       - focus
       - schedule
@@ -10769,7 +10769,7 @@ info:
   label: Info
   search:
     terms:
-      - detaills
+      - details
       - help
       - information
       - more
@@ -10785,7 +10785,7 @@ info-circle:
   label: Info Circle
   search:
     terms:
-      - detaills
+      - details
       - help
       - information
       - more

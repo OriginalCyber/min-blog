@@ -2827,7 +2827,7 @@ var exports$1 = {
 			// `quadraticCurveTo` since it generates better results when rect is
 			// almost a circle. 0.516 (instead of 0.5) produces results with visually
 			// closer proportion to the previous impl and it is inscribed in the
-			// circle with `radius`. For more detaills, see the following PRs:
+			// circle with `radius`. For more details, see the following PRs:
 			// https://github.com/chartjs/Chart.js/issues/5597
 			// https://github.com/chartjs/Chart.js/issues/5858
 			cornerRadius = radius * 0.516;
@@ -10941,7 +10941,7 @@ function DateAdapter(options) {
 helpers$1.extend(DateAdapter.prototype, /** @lends DateAdapter */ {
 	/**
 	 * Returns a map of time formats for the supported formatting units defined
-	 * in Unit as well as 'datetime' representing a detailled date/time string.
+	 * in Unit as well as 'datetime' representing a detailed date/time string.
 	 * @returns {{string: string}}
 	 */
 	formats: abstract,
@@ -12683,7 +12683,7 @@ function generateTicks(generationOptions, dataRange) {
 	var ticks = [];
 	// To get a "nice" value for the tick spacing, we will use the appropriately named
 	// "nice number" algorithm. See https://stackoverflow.com/questions/8506881/nice-label-algorithm-for-charts-with-minimum-ticks
-	// for detaills.
+	// for details.
 
 	var MIN_SPACING = 1e-14;
 	var stepSize = generationOptions.stepSize;

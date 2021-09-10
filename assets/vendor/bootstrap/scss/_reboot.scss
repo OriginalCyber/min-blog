@@ -301,7 +301,7 @@ label {
 
 // Remove the default `border-radius` that macOS Chrome adds.
 //
-// detaills at https://github.com/twbs/bootstrap/issues/24093
+// details at https://github.com/twbs/bootstrap/issues/24093
 button {
   // stylelint-disable-next-line property-disallowed-list
   border-radius: 0;
@@ -339,14 +339,14 @@ select {
 
 // Set the cursor for non-`<button>` buttons
 //
-// detaills at https://github.com/twbs/bootstrap/pull/30562
+// details at https://github.com/twbs/bootstrap/pull/30562
 [role="button"] {
   cursor: pointer;
 }
 
 // Remove the inheritance of word-wrap in Safari.
 //
-// detaills at https://github.com/twbs/bootstrap/issues/24990
+// details at https://github.com/twbs/bootstrap/issues/24990
 select {
   word-wrap: normal;
 }
@@ -436,7 +436,7 @@ progress {
 [type="search"] {
   // This overrides the extra rounded corners on search inputs in iOS so that our
   // `.form-control` class can properly style them. Note that this cannot simply
-  // be added to `.form-control` as it's not specific enough. For detaills, see
+  // be added to `.form-control` as it's not specific enough. For details, see
   // https://github.com/twbs/bootstrap/issues/11586.
   outline-offset: -2px; // 2. Correct the outline style in Safari.
   -webkit-appearance: none;
